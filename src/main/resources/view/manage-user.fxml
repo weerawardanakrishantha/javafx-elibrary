@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="588.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageUserController">
+   <children>
+      <TextField fx:id="txtEmail" layoutX="29.0" layoutY="350.0" prefHeight="31.0" prefWidth="258.0" promptText="email" />
+      <TextField fx:id="txtId" layoutX="29.0" layoutY="146.0" prefHeight="31.0" prefWidth="257.0" promptText="id" />
+      <TextField fx:id="txtName" layoutX="29.0" layoutY="207.0" prefHeight="31.0" prefWidth="258.0" promptText="name" />
+      <TextField fx:id="txtPassword" layoutX="29.0" layoutY="281.0" prefHeight="31.0" prefWidth="258.0" promptText="password" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#093156" height="80.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="934.0" />
+      <Label alignment="CENTER" layoutX="282.0" layoutY="11.0" prefHeight="44.0" prefWidth="331.0" text="Manage Users" textFill="#bc4f4f">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="24.0" layoutY="477.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="37.0" prefWidth="78.0" text="Add">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="105.0" layoutY="477.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="98.0" text="Update">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="209.0" layoutY="477.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="37.0" prefWidth="78.0" text="Delete">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblUsers" layoutX="321.0" layoutY="146.0" onMouseClicked="#tblClicked" prefHeight="368.0" prefWidth="591.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="61.60003662109375" text="id" />
+            <TableColumn fx:id="colName" prefWidth="130.39996337890625" text="name" />
+            <TableColumn fx:id="colPassword" prefWidth="131.199951171875" text="password" />
+            <TableColumn fx:id="colEmail" prefWidth="133.5999755859375" text="email" />
+            <TableColumn fx:id="colContact" prefWidth="135.1999389648438" text="contact" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtContact" layoutX="28.0" layoutY="414.0" prefHeight="31.0" prefWidth="258.0" promptText="contact" />
+   </children>
+</AnchorPane>

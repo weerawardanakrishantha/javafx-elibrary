@@ -33,8 +33,10 @@ public class HomeController {
     }
 
     @FXML
-    void btnManageUsers(ActionEvent event) {
-
+    void btnManageUsers(ActionEvent event) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/manage-user.fxml"))));
+        stage.show();
     }
 
     @FXML

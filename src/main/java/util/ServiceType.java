@@ -1,5 +1,5 @@
 package util;
 
 public enum ServiceType {
-    USER, BOOK
+    USER, BOOK, STUDENT
 }
