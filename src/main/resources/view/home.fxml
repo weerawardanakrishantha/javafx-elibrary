@@ -1,14 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.HomeController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="676.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#082c4e" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="932.0" />
+      <Label alignment="CENTER" layoutX="159.0" layoutY="5.0" prefHeight="62.0" prefWidth="524.0" text="Library Management System" textFill="#8c3a3a">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#082c4e" height="607.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="240.0" />
+      <Button layoutX="15.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnManageBooks" prefHeight="43.0" prefWidth="214.0" text="Manage Books" textFill="#943b3b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnManageUsers" prefHeight="43.0" prefWidth="214.0" text="Manage Users" textFill="#943b3b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="244.0" mnemonicParsing="false" onAction="#btnManageStudents" prefHeight="43.0" prefWidth="214.0" text="Manage Students" textFill="#943b3b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="318.0" mnemonicParsing="false" onAction="#btnIssueBook" prefHeight="43.0" prefWidth="214.0" text="Issue Book" textFill="#943b3b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="389.0" mnemonicParsing="false" onAction="#btnReturnBook" prefHeight="43.0" prefWidth="214.0" text="Return Book" textFill="#943b3b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="458.0" mnemonicParsing="false" onAction="#btnViewRecord" prefHeight="43.0" prefWidth="214.0" text="View Records" textFill="#943b3b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="531.0" mnemonicParsing="false" onAction="#btnViewIssuedBooks" prefHeight="43.0" prefWidth="214.0" text="View Issued Books" textFill="#943b3b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="599.0" mnemonicParsing="false" onAction="#btnDefaulterList" prefHeight="43.0" prefWidth="214.0" text="Defaulter List" textFill="#943b3b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="303.0" layoutY="137.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="310.0" layoutY="127.0" prefHeight="22.0" prefWidth="136.0" text="Number Of Books" textFill="#891a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="510.0" layoutY="135.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="517.0" layoutY="125.0" prefHeight="22.0" prefWidth="136.0" text="Issued Books" textFill="#891a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="730.0" layoutY="130.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="737.0" layoutY="120.0" prefHeight="22.0" prefWidth="136.0" text="Number of Students" textFill="#891a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView layoutX="303.0" layoutY="296.0" prefHeight="326.0" prefWidth="584.0">
+        <columns>
+          <TableColumn prefWidth="91.99993896484375" text="C1" />
+          <TableColumn prefWidth="152.80001831054688" text="C2" />
+            <TableColumn prefWidth="182.39996337890625" text="C2" />
+            <TableColumn prefWidth="156.79998779296875" text="C2" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

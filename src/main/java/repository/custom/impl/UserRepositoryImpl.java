@@ -8,6 +8,7 @@ import repository.custom.UserRepository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 
 public class UserRepositoryImpl implements UserRepository {
@@ -22,5 +23,20 @@ public class UserRepositoryImpl implements UserRepository {
         pst.setString(4,userEntity.getContact());
 
         int i = pst.executeUpdate();
+    }
+
+    @Override
+    public List<UserEntity> getAll() {
+        return List.of();
+    }
+
+    @Override
+    public void update(UserEntity entity) {
+
+    }
+
+    @Override
+    public Boolean delete(Integer integer) throws SQLException {
+        return null;
     }
 }

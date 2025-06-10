@@ -1,5 +1,6 @@
 package service;
 
+import service.custom.impl.BookServiceImpl;
 import service.custom.impl.UserServiceImpl;
 import util.ServiceType;
 
@@ -17,6 +18,7 @@ public class ServiceFactory {
     public <T extends SuperService>T getServiceType(ServiceType type){
         switch (type){
             case USER : return (T) new UserServiceImpl();
+            case BOOK: return (T) new BookServiceImpl();
         }
         return null;
     }
