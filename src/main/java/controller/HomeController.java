@@ -28,8 +28,10 @@ public class HomeController {
     }
 
     @FXML
-    void btnManageStudents(ActionEvent event) {
-
+    void btnManageStudents(ActionEvent event) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/manage-students.fxml"))));
+        stage.show();
     }
 
     @FXML
