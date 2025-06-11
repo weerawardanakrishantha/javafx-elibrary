@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="566.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnBookController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#052b4e" height="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="870.0" />
+      <Label alignment="CENTER" layoutX="221.0" layoutY="12.0" prefHeight="55.0" prefWidth="387.0" text="Return Book" textFill="#bc0a0a">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="147.0" prefHeight="26.0" prefWidth="102.0" text="Issue Id : " textFill="#1f1881">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIssueId" layoutX="153.0" layoutY="146.0" prefHeight="26.0" prefWidth="102.0" textFill="#b11d1d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="199.0" prefHeight="30.0" prefWidth="114.0" text="Book Title :" textFill="#1f1881">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitle" layoutX="176.0" layoutY="199.0" prefHeight="30.0" prefWidth="387.0" textFill="#b11d1d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="251.0" prefHeight="30.0" prefWidth="148.0" text="Student Name :" textFill="#1f1881">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblName" layoutX="218.0" layoutY="251.0" prefHeight="30.0" prefWidth="340.0" textFill="#b11d1d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="308.0" prefHeight="30.0" prefWidth="137.0" text="Issue Date :" textFill="#1f1881">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIssueDate" layoutX="204.0" layoutY="308.0" prefHeight="30.0" prefWidth="216.0" textFill="#b11d1d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="383.0" prefHeight="30.0" prefWidth="126.0" text="Due Date : " textFill="#1f1881">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDueDate" layoutX="189.0" layoutY="383.0" prefHeight="30.0" prefWidth="232.0" textFill="#b11d1d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookDetail" layoutX="62.0" layoutY="450.0" prefHeight="30.0" prefWidth="250.0" textFill="#1f1881">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookId" layoutX="608.0" layoutY="149.0" prefHeight="30.0" prefWidth="216.0" promptText="BookId" />
+      <TextField fx:id="txtStudentId" layoutX="608.0" layoutY="229.0" prefHeight="30.0" prefWidth="216.0" promptText="StudentId" />
+      <Button layoutX="650.0" layoutY="313.0" mnemonicParsing="false" onAction="#onClickFindBook" prefHeight="30.0" prefWidth="126.0" text="Find Book" textFill="#b11d1d">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="650.0" layoutY="401.0" mnemonicParsing="false" onAction="#onClickReturnBook" prefHeight="26.0" prefWidth="126.0" text="Return Book" textFill="#b11d1d">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

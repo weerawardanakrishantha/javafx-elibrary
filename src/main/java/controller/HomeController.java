@@ -44,8 +44,10 @@ public class HomeController {
     }
 
     @FXML
-    void btnReturnBook(ActionEvent event) {
-
+    void btnReturnBook(ActionEvent event) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/reurn-book.fxml"))));
+        stage.show();
     }
 
     @FXML
