@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="578.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IssueBookController">
+   <children>
+      <Label alignment="CENTER" layoutX="30.0" layoutY="85.0" prefHeight="28.0" prefWidth="154.0" text="Book Details" textFill="#790f0f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="150.0" prefHeight="26.0" prefWidth="66.0" text="Book Id : " textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookId" layoutX="107.0" layoutY="150.0" prefHeight="26.0" prefWidth="112.0" textFill="#a61717">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="229.0" prefHeight="26.0" prefWidth="54.0" text="Title : " textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitle" layoutX="79.0" layoutY="229.0" prefHeight="26.0" prefWidth="257.0" textFill="#a61717">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="315.0" prefHeight="26.0" prefWidth="66.0" text="Author :" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAuthor" layoutX="90.0" layoutY="315.0" prefHeight="26.0" prefWidth="246.0" textFill="#a61717">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="410.0" prefHeight="26.0" prefWidth="89.0" text="Quantity : " textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQuantity" layoutX="102.0" layoutY="409.0" prefHeight="26.0" prefWidth="162.0" textFill="#a61717">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="352.0" layoutY="153.0" prefHeight="26.0" prefWidth="102.0" text="Student Id : " textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSudentId" layoutX="440.0" layoutY="156.0" prefHeight="26.0" prefWidth="112.0" textFill="#a61717">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="232.0" prefHeight="26.0" prefWidth="66.0" text="Name :" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblName" layoutX="416.0" layoutY="233.0" prefHeight="26.0" prefWidth="135.0" textFill="#a61717">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="318.0" prefHeight="26.0" prefWidth="82.0" text="Address : " textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAddress" layoutX="420.0" layoutY="318.0" prefHeight="26.0" prefWidth="127.0" textFill="#a61717">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="409.0" prefHeight="26.0" prefWidth="89.0" text="Course :" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCourse" layoutX="417.0" layoutY="408.0" prefHeight="26.0" prefWidth="127.0" textFill="#a61717">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="346.0" layoutY="85.0" prefHeight="28.0" prefWidth="154.0" text="Student Details" textFill="#790f0f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="632.0" layoutY="85.0" prefHeight="28.0" prefWidth="154.0" text="Issue Book" textFill="#790f0f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookId" layoutX="686.0" layoutY="157.0" onMouseExited="#bookIdMouseExited" />
+      <Label layoutX="585.0" layoutY="156.0" prefHeight="26.0" prefWidth="66.0" text="Book Id" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStudentId" layoutX="687.0" layoutY="233.0" onMouseExited="#studentIdMouseExited" />
+      <Label layoutX="587.0" layoutY="233.0" prefHeight="26.0" prefWidth="90.0" text="Student Id" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="585.0" layoutY="315.0" prefHeight="26.0" prefWidth="90.0" text="Issue Date" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="583.0" layoutY="409.0" prefHeight="26.0" prefWidth="90.0" text="Due Date" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateIssueDate" layoutX="684.0" layoutY="315.0" />
+      <DatePicker fx:id="dateDueDate" layoutX="684.0" layoutY="409.0" />
+      <Button layoutX="632.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnIssueOnAction" prefHeight="34.0" prefWidth="150.0" text="Issue Book" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblBookId1" layoutX="117.0" layoutY="160.0" prefHeight="26.0" prefWidth="112.0" textFill="#a61717">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookIdValid" layoutX="41.0" layoutY="489.0" prefHeight="26.0" prefWidth="175.0" text=" " textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="iblStudentIdValid" layoutX="315.0" layoutY="489.0" prefHeight="26.0" prefWidth="175.0" textFill="#1e2ca9">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

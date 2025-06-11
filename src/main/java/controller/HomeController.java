@@ -16,8 +16,10 @@ public class HomeController {
     }
 
     @FXML
-    void btnIssueBook(ActionEvent event) {
-
+    void btnIssueBook(ActionEvent event) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/issue-book.fxml"))));
+        stage.show();;
     }
 
     @FXML
