@@ -1,5 +1,6 @@
 package controller;
 
+import db.DBConnection;
 import dto.Book;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -18,6 +19,9 @@ import util.ServiceType;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -94,6 +98,9 @@ public class HomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadTable();
+        setBookCount();
+        setIssueBooks();
+        setNumberOfStudents();
     }
 
     private void loadTable(){
@@ -104,6 +111,44 @@ public class HomeController implements Initializable {
         try {
             List<Book> books=bookService.getAllBooks();
             tblBooks.setItems(FXCollections.observableArrayList(books));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private void setBookCount(){
+        try {
+            Connection connection= DBConnection.getInstance().getConnection();
+            PreparedStatement pst = connection.prepareStatement("select sum(qty) from books");
+            ResultSet resultSet = pst.executeQuery();
+            if(resultSet.next()){
+                lblAvailableBooks.setText(Integer.toString(resultSet.getInt(1)));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private void setIssueBooks(){
+        Connection connection= null;
+        try {
+            connection = DBConnection.getInstance().getConnection();
+            PreparedStatement pst = connection.prepareStatement("select count(status) from issue_books where status=?");
+            pst.setString(1,"pending");
+            ResultSet resultSet = pst.executeQuery();
+            if(resultSet.next()){
+                lblIssuedBooks.setText(Integer.toString(resultSet.getInt(1)));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private void setNumberOfStudents(){
+        try {
+            Connection connection=DBConnection.getInstance().getConnection();
+            PreparedStatement pst = connection.prepareStatement("select count(id) from students");
+            ResultSet resultSet = pst.executeQuery();
+            if(resultSet.next()){
+                lblStudent.setText(Integer.toString(resultSet.getInt(1)));
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

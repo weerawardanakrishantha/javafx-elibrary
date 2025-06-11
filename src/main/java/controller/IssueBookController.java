@@ -19,6 +19,7 @@ public class IssueBookController {
     public Label iblStudentIdValid;
     public DatePicker dateIssueDate;
     public DatePicker dateDueDate;
+    public Label lblBookId1;
     @FXML
     private Label lblAddress;
 
@@ -95,6 +96,10 @@ public class IssueBookController {
                 lblBookIdValid.setText("");
             }else {
                 lblBookIdValid.setText("Invalid BookId");
+                lblBookId.setText("");
+                lblTitle.setText("");
+                lblAuthor.setText("");
+                lblQuantity.setText("");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -114,6 +119,10 @@ public class IssueBookController {
                 iblStudentIdValid.setText("");
             }else{
                 iblStudentIdValid.setText("Invalid StudentId");
+                lblSudentId.setText("");
+                lblName.setText("");
+                lblAddress.setText("");
+                lblCourse.setText("");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
