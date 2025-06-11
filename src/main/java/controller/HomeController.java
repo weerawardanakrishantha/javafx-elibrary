@@ -36,8 +36,10 @@ public class HomeController implements Initializable {
     BookService bookService= ServiceFactory.getInstance().getServiceType(ServiceType.BOOK);
 
     @FXML
-    void btnDefaulterList(ActionEvent event) {
-
+    void btnDefaulterList(ActionEvent event) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/fine-management.fxml"))));
+        stage.show();
     }
 
     @FXML
@@ -83,8 +85,10 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    void btnViewRecord(ActionEvent event) {
-
+    void btnViewRecord(ActionEvent event) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/book-record.fxml"))));
+        stage.show();
     }
 
     @Override
