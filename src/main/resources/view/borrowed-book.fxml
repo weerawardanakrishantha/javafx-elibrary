@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="569.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BorrowedBookController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#072c4e" height="89.0" stroke="BLACK" strokeType="INSIDE" width="788.0" />
+      <Label alignment="CENTER" layoutX="210.0" layoutY="15.0" prefHeight="62.0" prefWidth="332.0" text="Borrowed Book" textFill="#9e0c0c">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblBooks" layoutX="70.0" layoutY="157.0" prefHeight="340.0" prefWidth="659.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="colTitle" prefWidth="237.5999755859375" text="Title" />
+            <TableColumn fx:id="colAuthor" prefWidth="220.00009155273438" text="Author" />
+            <TableColumn fx:id="colStatus" prefWidth="128.800048828125" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

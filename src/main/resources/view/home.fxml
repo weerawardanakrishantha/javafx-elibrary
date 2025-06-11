@@ -47,17 +47,17 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="15.0" layoutY="531.0" mnemonicParsing="false" onAction="#btnViewIssuedBooks" prefHeight="43.0" prefWidth="214.0" text="View Issued Books" textFill="#943b3b">
+      <Button layoutX="15.0" layoutY="531.0" mnemonicParsing="false" onAction="#btnViewIssuedBooks" prefHeight="43.0" prefWidth="214.0" text="Borrowed Books" textFill="#943b3b">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="15.0" layoutY="599.0" mnemonicParsing="false" onAction="#btnDefaulterList" prefHeight="43.0" prefWidth="214.0" text="Defaulter List" textFill="#943b3b">
+      <Button layoutX="15.0" layoutY="599.0" mnemonicParsing="false" onAction="#btnDefaulterList" prefHeight="43.0" prefWidth="214.0" text="Fine Management" textFill="#943b3b">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="303.0" layoutY="137.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
+      <Label fx:id="lblAvailableBooks" alignment="CENTER" layoutX="303.0" layoutY="137.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -67,7 +67,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="510.0" layoutY="135.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
+      <Label fx:id="lblIssuedBooks" alignment="CENTER" layoutX="510.0" layoutY="135.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -77,7 +77,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="730.0" layoutY="130.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
+      <Label fx:id="lblStudent" alignment="CENTER" layoutX="730.0" layoutY="130.0" prefHeight="98.0" prefWidth="148.0" text="8" textFill="#7b2c2c">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -87,12 +87,12 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TableView layoutX="303.0" layoutY="296.0" prefHeight="326.0" prefWidth="584.0">
+      <TableView fx:id="tblBooks" layoutX="303.0" layoutY="296.0" prefHeight="326.0" prefWidth="584.0">
         <columns>
-          <TableColumn prefWidth="91.99993896484375" text="C1" />
-          <TableColumn prefWidth="152.80001831054688" text="C2" />
-            <TableColumn prefWidth="182.39996337890625" text="C2" />
-            <TableColumn prefWidth="156.79998779296875" text="C2" />
+          <TableColumn fx:id="colId" prefWidth="91.99993896484375" text="id" />
+          <TableColumn fx:id="colTitle" prefWidth="152.80001831054688" text="title" />
+            <TableColumn fx:id="colAuthor" prefWidth="182.39996337890625" text="author" />
+            <TableColumn fx:id="colQuantity" prefWidth="156.79998779296875" text="quantity" />
         </columns>
       </TableView>
    </children>
